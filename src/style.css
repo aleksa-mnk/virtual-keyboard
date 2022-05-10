@@ -1,0 +1,282 @@
+@charset "UTF-8";
+
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* @import url(https://allfont.net/allfont.css?fonts=ds-pixel-cyr); */
+
+body {
+    background-color: #dddddd;
+}
+
+.wrapper {
+    width: 910px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'DS Pixel Cyr', arial;
+
+    color: rgb(56, 96, 85);
+}
+
+.textarea {
+    width: 100%;
+    margin: 0 auto;
+    height: 180px;
+    border-radius: 5px;
+    border: 3px solid rgb(64, 125, 100);
+    background-color: #7bd1c1;
+    margin-bottom: 30px;
+    color: white;
+
+    font-family: 'DS Pixel Cyr', arial;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    padding: 10px;
+}
+
+.keyboard {
+    width: 100%;
+    padding: 10px 10px 27px;
+    height: 327px;
+    background-color: #ffe3e2;
+    border: 2px solid #b18597;
+    display: grid;
+    grid-template-rows: repeat(5, 50px);
+    row-gap: 10px;
+
+    border-radius: 10px;
+    margin-top: 12px;
+}
+
+p {
+    text-align: center;
+    font-family: 'DS Pixel Cyr', arial;
+    color: #304541ec;
+}
+
+.row {
+    width: 100%;
+}
+
+.first {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(13, 50px) 1fr;
+    column-gap: 10px;
+}
+
+.second {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr repeat(14, 50px);
+    column-gap: 10px;
+}
+
+.third {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 110px repeat(11, 50px) 1fr;
+    column-gap: 10px;
+}
+
+.fourth {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr repeat(13, 50px);
+    column-gap: 10px;
+}
+
+.fifth {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 80px repeat(2, 50px) 1fr 50px 80px repeat(3, 50px);
+    column-gap: 10px;
+}
+
+.key {
+    background-color: aquamarine;
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    font-family: 'DS Pixel Cyr', arial;
+    color: #382b22;
+    text-transform: uppercase;
+    background: #fff0f0;
+    border: 2px solid #b18597;
+    border-radius: 0.75em;
+    transition: transform 0.15s;
+    transform-style: preserve-3d;
+
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.key::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f9c4d2;
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+    transform: translate3d(0, 0.5em, -1em);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.key:hover {
+    background: #ffe9e9;
+    transform: translate(0, 0.05em);
+}
+
+.key:hover::before {
+    box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+    transform: translate3d(0, 0.5em, -1em);
+}
+
+.key:active {
+    background: #ffe9e9;
+    transform: translate(0em, 0.5em);
+}
+
+.key:active::before {
+    box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+    transform: translate3d(0, 0, -1em);
+}
+
+.digit {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.active {
+    background: #ffe9e9;
+    transform: translate(0em, 0.5em);
+}
+
+.active::before {
+    box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+    transform: translate3d(0, 0, -1em);
+}
+
+.active:hover {
+    background: #ffe9e9;
+    transform: translate(0em, 0.5em);
+}
+
+.active:hover::before {
+    box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+    transform: translate3d(0, 0, -1em);
+}
